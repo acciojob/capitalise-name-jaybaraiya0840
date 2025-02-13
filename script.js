@@ -1,7 +1,11 @@
 //your JS code here. If required.
 function capitalizeName() {
     var inputField = document.getElementById('fname');
-    inputField.value = inputField.value.toUpperCase();
+    inputField.value = inputField.value.toUpperCase(); // Convert value to uppercase
 }
 
-document.getElementById('fname').addEventListener('blur', capitalizeName);
+// Add event listener for 'blur' event
+document.addEventListener('DOMContentLoaded', function() {
+    var inputField = document.getElementById('fname');
+    inputField.addEventListener('blur', capitalizeName); // Call capitalizeName when the input field loses focus
+});
